@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:portfolio/pages/project/project_detail.dart';
 import '../../models/project.dart';
 
 class ProjectCard extends StatelessWidget {
@@ -9,13 +10,8 @@ class ProjectCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => showDialog(
-          context: context,
-          builder: (context) {
-            return const AlertDialog(
-              title: Text("You clicked a project card"),
-            );
-          }),
+      onTap: () => Navigator.push(
+          context, MaterialPageRoute(builder: (_) => ProjectDetail())),
       child: Container(
         width: MediaQuery.of(context).size.width / 1.3,
         height: 350,
