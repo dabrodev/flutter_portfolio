@@ -20,6 +20,7 @@ class HomePage extends StatelessWidget {
         },
       ),
       body: SafeArea(
+        bottom: false,
         child: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
